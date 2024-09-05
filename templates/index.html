@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Phân loại Iris</title>
+</head>
+<body>
+    <h3>Phạm Hoàng Phong - B2113316</h3>
+    <h1>Phân loại hoa Iris</h1>
+
+    <div class="content">
+        <form action="/predict" method="POST">
+            <!-- Input fields for Iris features -->
+            <label for="sepal_length">Sepal Length (cm):</label><br>
+            <input type="text" name="sepal_length" id="sepal_length" required><br><br>
+
+            <label for="sepal_width">Sepal Width (cm): </label><br>
+            <input type="text" name="sepal_width" id="sepal_width" required><br><br>
+
+            <label for="petal_length">Petal Length (cm):</label><br>
+            <input type="text" name="petal_length" id="petal_length" required><br><br>
+
+            <label for="petal_width">Petal Width (cm): </label><br>
+            <input type="text" name="petal_width" id="petal_width" required><br><br>
+
+            <input type="submit" value="Dự đoán">
+        </form>
+
+        <!-- Display prediction result -->
+        <h2>{{ prediction_text }}</h2>
+    </div>
+    
+</body>
+
+<style>
+body {
+    padding-top: 5%;
+}
+
+h1, h3 {
+    text-align: center;
+}
+
+.content     {
+    padding: 0 43%;
+}
+</style>
+</html>
